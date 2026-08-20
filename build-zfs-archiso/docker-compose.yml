@@ -1,0 +1,9 @@
+# run with: docker compose up --pull always
+services:
+  archiso:
+    image: archlinux:latest
+    privileged: true
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+    command: ["/mnt/build-zfs-archiso.sh"]
